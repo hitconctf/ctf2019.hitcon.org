@@ -267,7 +267,7 @@ $(document).on('click', '.challenge-entry.unlocked', function(){
     window.location.hash = "#" + chall_id;
 
     if (challenge.solved_times) {
-        $.getJSON("/dashboard/solved_team_data?id=" + challenge.id, function(data) {
+        $.getJSON("/dashboard/solved_team_data_" + challenge.id, function(data) {
             if (data.length)  {
                 var entries = '<table class="table table-condensed">';
                 entries += '<thead><tr>';
